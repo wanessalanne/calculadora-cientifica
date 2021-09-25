@@ -1,0 +1,44 @@
+<!-- (click) = angular != js (Onclick) -->
+<!-- () -> eventos (event binder) , [] -> propert binder (vai ligar o html pro que tá acontecendo no ts), ([ngmodel]) -> Two way binder (ligação de duas guias)   -->
+
+<h1>Calculadora Científica</h1>
+<div id="calculadora2">
+    <div class="mostrar" >
+        <input id="resultado2" type="text" class="form-control text-right" id="display" name="display" readonly [value]="display">
+    </div>
+    <table>
+        <tr>
+            <td><button class="botao2" (click)="limpar()">C</button></td>
+            <td><button class="botao2" (click)="raiz()">√</button></td>            
+            <td><button class="botao2" (click)="delete()"><</button>
+            </td>
+            <td><button class="botao2" (click)="definirOperacao('/')">/</button></td>
+            <td><button class="botao2" (click)="definirOperacao('X')">X</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao2" (click)="quadrado()">x²</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('7')">7</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('8')">8</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('9')">9</button></td>
+            <td><button class="botao2" (click)="definirOperacao('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao2" (click)="cubo()">x³</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('4')">4</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('5')">5</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('6')">6</button></td>
+            <td><button class="botao2" (click)="definirOperacao('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao2" (click)="adicionaNumero('3.14159265359')">π</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('1')">1</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('2')">2</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('3')">3</button></td>
+            <td rowspan="2"><button class="botao2" style="height: 106px;" (click)="calcular()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button class="botao2" style="width: 177px;" (click)="adicionaNumero('0')">0</button></td>
+            <td><button class="botao2" (click)="adicionaNumero('.')">.</button></td>
+        </tr>
+    </table>
+</div>
